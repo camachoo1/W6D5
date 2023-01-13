@@ -27,11 +27,13 @@
   </label>
   <br>
   <label>Enter Cat Sex:
-    <select id="sex" name="cat[sex]" value= "<%= @cat.sex  %>">
-      <option selected disabled value="">--Please Select Sex--</option>
-      <option <%= "selected" if cat.sex == 'F' %> value="F" >F</option>
-      <option <%= "selected" if cat.sex == 'M' %> value="M" >M</option>
-    </select>
+    <br>
+    <input type="radio" id="M" name="cat[sex]" value="M">
+    <label for="M">M</label>
+    <br>
+    <input type="radio" id="W" name="cat[sex]" value="W">
+    <label for="W">W</label>
+    <br>
   </label>
   <br>
   <label>Enter Cat Description:
