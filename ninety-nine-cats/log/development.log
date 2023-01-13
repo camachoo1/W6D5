@@ -1,0 +1,2 @@
+  [1m[35m (127.4ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_development" ENCODING = 'unicode'[0m
+  [1m[35m (157.0ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_test" ENCODING = 'unicode'[0m
