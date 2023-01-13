@@ -18,3 +18,15 @@ Migrating to CreateCats (20230113214217)
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(723150122408807205)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-01-13 14:51:34 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:1
+  Rendered cats/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1238)
+  Rendered layout layouts/application.html.erb (Duration: 32.1ms | Allocations: 8074)
+Completed 200 OK in 44ms (Views: 39.3ms | ActiveRecord: 1.5ms | Allocations: 11313)
+
+
