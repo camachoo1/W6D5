@@ -1,2 +1,36 @@
 <h1>Create a new Cat</h1>
-<%= render 'form', cat: @cat, action: :new %>
+<form action="<%= cats_url %>" method="POST">
+  <label>Enter Cat Name:
+    <input type="text" name="cat[name]" value="">
+  </label>
+  <br>
+  <label>Enter Cat Birth Date:
+    <input type="date" name="cat[birth_date]" value="Birth Date">
+  </label>
+  <br>
+  <label for="cat-colors">Enter Cat Color:
+    <select id="cat-colors" name="cat[color]" >
+      <option selected disabled value="">Please Select Color</option>
+      <option <%= @cat.color == Cat::CAT_COLORS[0] %>value="<%= Cat::CAT_COLORS[0]%>"> <%= Cat::CAT_COLORS[0] %> </option>
+      <option <%= @cat.color == Cat::CAT_COLORS[1] %> value="<%= Cat::CAT_COLORS[1]%>"> <%= Cat::CAT_COLORS[1] %> </option>
+      <option <%= @cat.color == Cat::CAT_COLORS[2] %> value="<%= Cat::CAT_COLORS[2]%>"> <%= Cat::CAT_COLORS[2] %> </option>
+      <option <%= @cat.color == Cat::CAT_COLORS[3] %> value="<%= Cat::CAT_COLORS[3]%>"> <%= Cat::CAT_COLORS[3] %> </option>
+    </select>
+  </label>
+  <br>
+  <label>Select Cat Sex:
+    <br>
+    <input type="radio" id="M" name="cat[sex]" value="M">
+    <label for="M">M</label>
+    <br>
+    <input type="radio" id="F" name="cat[sex]" value="F">
+    <label for="F">F</label>
+    <br>
+  </label>
+  <br>
+  <label>Enter Cat Description:
+    <input type="textbox" name="cat[description]" value="">
+  </label>
+  <br>
+  <input type="submit" value="Create Cat">
+</form>
